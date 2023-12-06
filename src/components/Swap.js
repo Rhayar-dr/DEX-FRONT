@@ -109,7 +109,7 @@ function Swap(props) {
 
   async function fetchPrices(one, two){
 
-      const res = await axios.get(`http://localhost:3001/tokenPrice`, {
+      const res = await axios.get(`https://dexback23.azurewebsites.net/tokenPrice`, {
         params: {addressOne: one, addressTwo: two}
       })
 
@@ -119,10 +119,10 @@ function Swap(props) {
 
   async function fetchDexSwap() {
     try {
-      const allowanceResponse = await axios.get(`http://localhost:3001/1inch/approve/allowance?tokenAddress=${tokenOne.address}&walletAddress=${address}`, config);
+      const allowanceResponse = await axios.get(`https://api.1inch.dev/swap/v5.2/1/approve/allowance?tokenAddress=${tokenOne.address}&walletAddress=${address}`, config);
   
       if (allowanceResponse.data.allowance === "0") {
-        const approveResponse = await axios.get(`http://localhost:3001/1inch/approve/transaction?tokenAddress=${tokenOne.address}`, config);
+        const approveResponse = await axios.get(`https://api.1inch.dev/swap/v5.2/1/approve/transaction?tokenAddress=${tokenOne.address}`, config);
         
         if (approveResponse.data.approved) {
           showTransactionModal('Transação de aprovação bem-sucedida!');
@@ -132,7 +132,7 @@ function Swap(props) {
         return;
       }
   
-      const txResponse = await axios.get(`http://localhost:3001/1inch/swap?fromTokenAddress=${tokenOne.address}&toTokenAddress=${tokenTwo.address}&amount=${tokenOneAmount.padEnd(tokenOne.decimals + tokenOneAmount.length, '0')}&fromAddress=${address}&slippage=${slippage}`, config);
+      const txResponse = await axios.get(`https://api.1inch.dev/swap/v5.2/1/swap?fromTokenAddress=${tokenOne.address}&toTokenAddress=${tokenTwo.address}&amount=${tokenOneAmount.padEnd(tokenOne.decimals + tokenOneAmount.length, '0')}&fromAddress=${address}&slippage=${slippage}`, config);
   
       if (txResponse.data.toAmount && txResponse.data.tx) {
         let decimals = Number(`1E${tokenTwo.decimals}`);
