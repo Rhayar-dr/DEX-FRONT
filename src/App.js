@@ -5,7 +5,7 @@ import Swap from "./components/Swap";
 import Tokens from "./components/Tokens";
 import { Routes } from 'react-router-dom';
 import { useConnect , useAccount } from 'wagmi';
-import { MetaMaskConnector, metaMaskConnector } from 'wagmi/connectors/metaMask';
+import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
 
 function App() {
 

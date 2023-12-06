@@ -165,45 +165,41 @@ function Swap(props) {
 
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
+    if (txDetails.to && isConnected) {
+      sendTransaction();
+    }
+  }, [txDetails.to, isConnected, sendTransaction]);
 
-      if(txDetails.to && isConnected){
-        sendTransaction();
-      }
-  }, [txDetails])
 
-  useEffect(()=>{
-
+  useEffect(() => {
     messageApi.destroy();
-
-    if(isLoading){
+    if (isLoading) {
       messageApi.open({
         type: 'loading',
         content: 'Transaction is Pending...',
         duration: 0,
-      })
-    }    
+      });
+    }
+  }, [isLoading, messageApi]);  
 
-  },[isLoading])
-
-  useEffect(()=>{
+  useEffect(() => {
     messageApi.destroy();
-    if(isSuccess){
+    if (isSuccess) {
       messageApi.open({
         type: 'success',
         content: 'Transaction Successful',
         duration: 1.5,
-      })
-    }else if(txDetails.to){
+      });
+    } else if (txDetails.to) {
       messageApi.open({
         type: 'error',
         content: 'Transaction Failed',
-        duration: 1.50,
-      })
+        duration: 1.5,
+      });
     }
-
-
-  },[isSuccess])
+  }, [isSuccess, txDetails.to, messageApi]);
+  
 
 
   const settings = (
