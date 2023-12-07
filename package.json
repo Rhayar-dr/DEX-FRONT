@@ -1,5 +1,5 @@
 {
-  "proxy": "https://api.1inch.dev",
+  "proxy": "https://dexback23.azurewebsites.net",
   "name": "dex",
   "version": "0.1.0",
   "private": true,
