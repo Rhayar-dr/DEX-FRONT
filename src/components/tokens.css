@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Optional: Set a specific height for the centered content */
+    padding-top: 100vh;
   }
 
   /* styles.css */
@@ -60,6 +61,7 @@
     padding: 10px;
     font-size: 16px;
     width: 75%;
+    font-palette: azure;
 }
 
 @media (max-width: 767px){

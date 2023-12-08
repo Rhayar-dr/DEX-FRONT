@@ -3,7 +3,8 @@
 }
 
 header {
-  height: 100px;
+  margin-top: 60px;
+  height: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +13,8 @@ header {
 }
 
 .logo{
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
   padding-right: 20px;
 }
 
@@ -27,18 +28,18 @@ header {
 .leftH {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
 }
 
 .rightH {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 0px;
 }
 
 .headerItem {
-  padding: 10px;
+  padding: 0px;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 5px;
@@ -82,8 +83,8 @@ header {
 
 .tradeBox {
   width: 400px;
-  background-color: #0E111B;
-  border: 2px solid #21273a;
+  background-color: #6600a5;
+  border: 2px solid #820793;
   min-height: 300px;
   border-radius: 15px;
   display: flex;
@@ -92,6 +93,7 @@ header {
   align-items: flex-start;
   padding-left: 30px;
   padding-right: 30px;
+  margin-top: 100px;
 }
 
 
@@ -313,4 +315,9 @@ header {
   font-size: 13px;
   font-weight: 300;
   color: #51596f;
+}
+
+.popUpSettings{
+  background-color: #5F6783;
+
 }
