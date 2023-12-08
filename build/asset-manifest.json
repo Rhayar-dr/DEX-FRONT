@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8a5acf4.css",
-    "main.js": "/static/js/main.e3121ba3.js",
-    "static/media/moralis-logo.svg": "/static/media/moralis-logo.aa658eaa416895465a8fcf129380ab15.svg",
+    "main.css": "/static/css/main.11608fc2.css",
+    "main.js": "/static/js/main.a34c3b55.js",
     "index.html": "/index.html",
     "static/media/eth.svg": "/static/media/eth.df265e367364f285053a1285ad8d418d.svg",
-    "main.c8a5acf4.css.map": "/static/css/main.c8a5acf4.css.map",
-    "main.e3121ba3.js.map": "/static/js/main.e3121ba3.js.map"
+    "main.11608fc2.css.map": "/static/css/main.11608fc2.css.map",
+    "main.a34c3b55.js.map": "/static/js/main.a34c3b55.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8a5acf4.css",
-    "static/js/main.e3121ba3.js"
+    "static/css/main.11608fc2.css",
+    "static/js/main.a34c3b55.js"
   ]
 }
