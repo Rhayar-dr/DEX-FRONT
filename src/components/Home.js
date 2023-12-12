@@ -1,7 +1,6 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
 import tokenList from '../tokenList.json';
-import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -19,10 +18,8 @@ function Home() {
 
   return (
     <div className="mainContainer">
-        <div className="homeContainer" style={{ backgroundImage: `url('/images/background-homepage.png')` }}>
-        <Link to="/swap" className="swapButtonHome">Swap any crypto here!</Link>
-        </div>
-        <div className="tokenshow" >
+    <div className="homeContainer" style={{ backgroundImage: `url('/images/background-homepage.png')` }}/>
+    <div className="tokenshow" >
         <input
         className="searchInputtoken" 
         type="text"

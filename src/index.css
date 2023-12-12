@@ -105,3 +105,30 @@ code {
 .ant-modal-close-icon:hover {
   color: white !important;
 }
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  body {
+      font-size: 14px; /* Smaller font size for mobile */
+      padding: 5px; /* Add some padding for smaller screens */
+  }
+
+  .ant-input {
+      height: 50px; /* Smaller input height for mobile */
+      font-size: 20px; /* Adjust font size for better readability */
+  }
+
+  .ant-popover-inner {
+      min-width: 200px; /* Adjust popover width for smaller screens */
+  }
+
+  .ant-modal {
+      width: 90% !important; /* Make modal width relative to screen size */
+      margin: 0 auto; /* Center the modal */
+  }
+
+  .ant-modal-content, .ant-modal-header {
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+}

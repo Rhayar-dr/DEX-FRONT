@@ -321,3 +321,92 @@ header {
   background-color: #5F6783;
 
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  header {
+      margin-top: 30px;
+      height: auto;
+      width: auto;
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  .logo {
+      width: 50px;
+      height: 50px;
+  }
+
+  .eth {
+      width: 10px;
+      height: 10px;
+  }
+
+  .leftH {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+  
+  .rightH {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .leftH, .rightH {
+      gap: 0px;
+  }
+
+  .headerItem {
+      padding: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+      font-size: 10px;
+  }
+
+  .connectButton {
+      padding: 5px 10px;
+      font-size: 12px;
+  }
+
+  .tradeBox {
+      width: 90%;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 50px;
+  }
+
+  .tradeBoxHeader, .modalContent, .modalContentError {
+      width: 95%;
+  }
+
+  .switchButton {
+      top: 70px;
+      left: calc(95% - 35px);
+  }
+
+  .assetLogo {
+      height: 18px;
+  }
+
+  .swapButton {
+      font-size: 16px;
+      margin-top: 5px;
+  }
+
+  .tokenLogo {
+      height: 30px;
+      width: 30px;
+  }
+
+  .tokenChoice {
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  .tokenName, .tokenTicker {
+      font-size: 14px;
+  }
+}
