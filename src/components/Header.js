@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Eth from "../eth.svg";
 import { Link } from 'react-router-dom';
 
 function Header(props) {
   const { address, isConnected, connect } = props;
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleConnect = () => {
+    if (window.ethereum) {
+      connect();
+    } else {
+      setShowPopup(true);
+    }
+  };
 
   return (
     <header>
@@ -24,10 +34,16 @@ function Header(props) {
           <img src={Eth} alt='eth' className='eth' />
           Ethereum
         </div>
-        <div className='connectButton' onClick={connect}>
+        <div className='connectButton' onClick={handleConnect}>
           {isConnected ? (address.slice(0,4)) + "..." + (address.slice(38)) : "Connect"}
         </div>
       </div>
+      {showPopup && (
+        <div className="popup">
+          <p>Please install MetaMask to continue.</p>
+          <button onClick={() => setShowPopup(false)}>Close</button>
+        </div>
+      )}
     </header>
   )
 }
